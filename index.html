@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — 楽器練習アプリ</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #fafbfc;
+    }
+    /* Subtle dot grid pattern */
+    .bg-grid {
+      background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-800 font-sans flex flex-col selection:bg-slate-900 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Top Left: Portfolio Only -->
+      <a href="#" class="text-xl font-bold tracking-tight text-slate-900 hover:opacity-80 transition-opacity">
+        Portfolio
+      </a>
+
+      <!-- Top Right: Buy me a coffee Only -->
+      <a 
+        href="https://buymeacoffee.com" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 hover:bg-amber-100/80 text-amber-900 border border-amber-200/80 text-xs sm:text-sm font-medium transition-all hover:shadow-sm"
+      >
+        <i data-lucide="coffee" class="w-4 h-4 text-amber-600"></i>
+        <span>Buy me a coffee</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow bg-grid">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+      
+      <!-- Hero Title -->
+      <div class="mb-12 sm:mb-14 text-center sm:text-left">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+          楽器練習アプリ
+        </h1>
+      </div>
+
+      <!-- Apps Grid (4 Apps) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+
+        <!-- App 1: Big Band Jazz Drum Training -->
+        <a 
+          href="https://bigband-jazz-drum-training.vercel.app" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group block p-7 rounded-2xl bg-white border border-slate-200/90 shadow-[0_2px_12px_-3px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_30px_-6px_rgba(0,0,0,0.08)] hover:border-slate-300 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div class="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-600 group-hover:scale-105 transition-transform">
+              <i data-lucide="drum" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center gap-1.5 text-slate-400 group-hover:text-slate-900 transition-colors text-xs font-semibold">
+              <span>開く</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+          </div>
+
+          <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+            Big Band Jazz Drum Training
+          </h2>
+
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Drums</span>
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Big Band</span>
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Swing</span>
+          </div>
+
+          <p class="text-sm text-slate-600 leading-relaxed">
+            ビッグバンド特有のダイナミクス、セクションフィギュアやアンサンブルの合わせを練習できるドラム特化トレーナー。
+          </p>
+        </a>
+
+        <!-- App 2: Comping Etude -->
+        <a 
+          href="https://comping-etude.vercel.app" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group block p-7 rounded-2xl bg-white border border-slate-200/90 shadow-[0_2px_12px_-3px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_30px_-6px_rgba(0,0,0,0.08)] hover:border-slate-300 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 group-hover:scale-105 transition-transform">
+              <i data-lucide="disc" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center gap-1.5 text-slate-400 group-hover:text-slate-900 transition-colors text-xs font-semibold">
+              <span>開く</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+          </div>
+
+          <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+            Comping Etude
+          </h2>
+
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Drums</span>
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Independence</span>
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Jazz Comping</span>
+          </div>
+
+          <p class="text-sm text-slate-600 leading-relaxed">
+            ライドレガートをキープしながらスネアやバスドラムのポリリズム・四肢独立（4-way coordination）を鍛えるコンピングエチュード。
+          </p>
+        </a>
+
+        <!-- App 3: Jazz Solo Trainer v2 -->
+        <a 
+          href="https://jazzsolotrainerv2.vercel.app" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group block p-7 rounded-2xl bg-white border border-slate-200/90 shadow-[0_2px_12px_-3px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_30px_-6px_rgba(0,0,0,0.08)] hover:border-slate-300 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 group-hover:scale-105 transition-transform">
+              <i data-lucide="music-2" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center gap-1.5 text-slate-400 group-hover:text-slate-900 transition-colors text-xs font-semibold">
+              <span>開く</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+          </div>
+
+          <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+            Jazz Solo Trainer v2
+          </h2>
+
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Solo</span>
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Improvisation</span>
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Harmony</span>
+          </div>
+
+          <p class="text-sm text-slate-600 leading-relaxed">
+            スタンダード進行上でのリックの展開、コードトーン、スケールアプローチを実践的にナビゲートするソロ練習ツール。
+          </p>
+        </a>
+
+        <!-- App 4: Bass Etude -->
+        <a 
+          href="https://bass-etude.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group block p-7 rounded-2xl bg-white border border-slate-200/90 shadow-[0_2px_12px_-3px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_30px_-6px_rgba(0,0,0,0.08)] hover:border-slate-300 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div class="w-12 h-12 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center text-purple-600 group-hover:scale-105 transition-transform">
+              <i data-lucide="sliders" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center gap-1.5 text-slate-400 group-hover:text-slate-900 transition-colors text-xs font-semibold">
+              <span>開く</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+          </div>
+
+          <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">
+            Bass Etude
+          </h2>
+
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Bass</span>
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Walking Bass</span>
+            <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200/60">Jazz Harmony</span>
+          </div>
+
+          <p class="text-sm text-slate-600 leading-relaxed">
+            コードチェンジを滑らかに繋ぐウォーキングベースラインの構築やアプローチノートを実践的にトレーニングするベースエチュード。
+          </p>
+        </a>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200/80 bg-white py-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-400">
+      <p>© Portfolio</p>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
